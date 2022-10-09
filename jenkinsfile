@@ -8,16 +8,34 @@ pipeline{
                 echo "Building the Project.........."
             }
         }
-        stage('Test') 
+        stage('Code Scan')
         {
             steps{
-                echo "Testing the Project.........."
+                echo "Scanning code of the Project.........."
             }
         }
-        stage('Deploy')
+        stage('Unit Test')
         {
             steps{
-                echo "Deploying the Project.........."
+                echo "Unit testing the Project.........."
+            }
+        }
+        stage('QA Deploy')
+        {
+            steps{
+                echo "Deploying the Project in QA Environment.........."
+            }
+        }
+        stage('QA Test') 
+        {
+            steps{
+                echo "QA Testing the Project.........."
+            }
+        }
+        stage('Production Deploy')
+        {
+            steps{
+                echo "Deploying the Project in Production.........."
             }
         }
     }
