@@ -32,10 +32,10 @@ pipeline{
                 echo "QA Testing the Project.........."
             }
         }
-        stage('Production Deploy')
+        stage('Production Release')
         {
             steps{
-                echo "Deploying the Project in Production.........."
+                echo "Releasing the Project in Production.........."
             }
         }
     }
